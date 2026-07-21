@@ -1,0 +1,2 @@
+﻿import Image from "next/image";
+export function Header(){return <header><a className="brand" href="#inicio"><Image src="/images/logo.jpg" width={64} height={64} alt="Decor Sandri" priority/><span><b>Decor Sandri</b><small>by Inventando Festa</small></span></a><nav><a href="#portfolio">Portfólio</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#faq">Dúvidas</a></nav><a className="header-cta" href="#contato">Pedir orçamento</a></header>}
