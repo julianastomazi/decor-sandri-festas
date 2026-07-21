@@ -1,4 +1,41 @@
-﻿import Image from "next/image";
-const items=[{src:"/images/hero.png",label:"Celebrações elegantes",cls:"wide"},{src:"/images/safari.png",label:"Infantis cheias de encanto",cls:"tall"},{src:"/images/burgundy.png",label:"Adultas com personalidade",cls:"tall dark"},{src:"/images/hero.png",label:"Detalhes que surpreendem",cls:"crop"}];
-export function Portfolio(){return <section className="portfolio" id="portfolio"><div className="section-head"><div><p className="eyebrow wine">Portfólio</p><h2>A festa dos seus sonhos<br/><em>começa no olhar.</em></h2></div><p>Cada composição nasce de uma história. Criamos cenários únicos, pensados para emocionar você e seus convidados.</p></div><div className="mosaic">{items.map((x,i)=><figure className={x.cls} key={i}><Image src={x.src} fill sizes="(max-width:700px) 100vw, 50vw" alt={x.label}/><figcaption>{x.label}<span>↗</span></figcaption></figure>)}</div></section>}
+import Image from "next/image";
+import { portfolioItems } from "@/lib/site-data";
+import { SectionHeading } from "./SectionHeading";
 
+export function Portfolio() {
+  return (
+    <section className="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Portfólio"
+          title={
+            <>
+              A festa dos seus sonhos <em id="portfolio-title">começa no olhar.</em>
+            </>
+          }
+          description="Cada composição nasce de uma história. Criamos cenários únicos, pensados para emocionar você e seus convidados."
+        />
+        <div className="portfolio-grid">
+          {portfolioItems.map((item) => (
+            <figure
+              className={`portfolio-card portfolio-card--${item.layout}`}
+              key={`${item.src}-${item.label}`}
+            >
+              <Image
+                src={item.src}
+                fill
+                sizes="(max-width: 680px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                alt={item.alt}
+                style={{ objectPosition: item.position }}
+              />
+              <figcaption>
+                {item.label}
+                <span aria-hidden="true">↗</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
