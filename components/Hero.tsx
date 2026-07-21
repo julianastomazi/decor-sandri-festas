@@ -1,2 +1,47 @@
-﻿import Image from "next/image";import {WhatsAppButton} from "./WhatsAppButton";
-export function Hero(){return <section className="hero" id="inicio"><Image className="hero-bg" src="/images/hero.png" fill priority sizes="100vw" alt="Decoração sofisticada em vinho, dourado e tons claros"/><div className="hero-shade"/><div className="hero-content"><p className="eyebrow">Decorações autorais em São Leopoldo e região</p><h1>Seu momento merece<br/><em>um cenário inesquecível.</em></h1><p>Projetamos festas infantis e adultas com personalidade, cuidado e beleza em cada detalhe — para você viver a celebração sem estresse.</p><div className="hero-actions"><WhatsAppButton/><a href="#portfolio" className="text-link">Conheça nosso trabalho <span>↓</span></a></div><div className="hero-proof"><span><b>5,0</b> no Google</span><span className="stars">★★★★★</span><span>+50 avaliações</span></div></div><div className="scroll">role para descobrir <span>↓</span></div></section>}
+import Image from "next/image";
+import { WhatsAppButton } from "./WhatsAppButton";
+
+export function Hero() {
+  return (
+    <section className="hero" id="inicio" aria-labelledby="hero-title">
+      <Image
+        className="hero-background"
+        src="/images/hero.png"
+        fill
+        priority
+        sizes="100vw"
+        alt=""
+      />
+      <div className="hero-overlay" />
+      <div className="container hero-content">
+        <p className="eyebrow">Decorações autorais em São Leopoldo e região</p>
+        <h1 id="hero-title">
+          Seu momento merece <em>um cenário inesquecível.</em>
+        </h1>
+        <p className="hero-description">
+          Projetamos festas infantis e adultas com personalidade, cuidado e beleza em cada detalhe —
+          para você viver a celebração sem estresse.
+        </p>
+        <div className="hero-actions">
+          <WhatsAppButton />
+          <a href="#portfolio" className="text-link">
+            Conheça nosso trabalho <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <div
+          className="hero-proof"
+          aria-label="Avaliação 5 de 5 no Google, baseada em mais de 50 avaliações"
+        >
+          <strong>5,0 no Google</strong>
+          <span className="stars" aria-hidden="true">
+            ★★★★★
+          </span>
+          <span>+50 avaliações</span>
+        </div>
+      </div>
+      <a className="scroll-hint" href="#portfolio">
+        Role para descobrir <span aria-hidden="true">↓</span>
+      </a>
+    </section>
+  );
+}
