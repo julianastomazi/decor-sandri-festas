@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/asset-path";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 export function Story() {
@@ -30,7 +31,7 @@ export function Story() {
       </div>
       <figure className="story-image">
         <Image
-          src="/images/ana-sandri.webp"
+          src={assetPath("/images/ana-sandri.webp")}
           fill
           sizes="(max-width: 800px) 100vw, 45vw"
           alt="Sandri, decoradora e fundadora"

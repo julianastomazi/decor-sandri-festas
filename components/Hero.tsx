@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { assetPath } from "@/lib/asset-path";
 import { WhatsAppButton } from "./WhatsAppButton";
 
 export function Hero() {
@@ -6,7 +7,7 @@ export function Hero() {
     <section className="hero" id="inicio" aria-labelledby="hero-title">
       <Image
         className="hero-background"
-        src="/images/hero-decor-sandri.webp"
+        src={assetPath("/images/hero-decor-sandri.webp")}
         fill
         priority
         sizes="100vw"
