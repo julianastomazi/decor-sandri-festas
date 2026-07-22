@@ -1,7 +1,10 @@
 ﻿node_modules/
 .next/
+.next-dev/
 work/
 outputs/
 *.log
+out/
+.codex-logs/
 
 *.tsbuildinfo

@@ -6,7 +6,7 @@ export function Hero() {
     <section className="hero" id="inicio" aria-labelledby="hero-title">
       <Image
         className="hero-background"
-        src="/images/hero.png"
+        src="/images/hero-decor-sandri.webp"
         fill
         priority
         sizes="100vw"
@@ -25,18 +25,21 @@ export function Hero() {
         <div className="hero-actions">
           <WhatsAppButton />
           <a href="#portfolio" className="text-link">
-            Conheça nosso trabalho <span aria-hidden="true">↓</span>
+            Conheça nosso trabalho <span aria-hidden="true">→</span>
           </a>
         </div>
         <div
           className="hero-proof"
           aria-label="Avaliação 5 de 5 no Google, baseada em mais de 50 avaliações"
         >
+          <span className="google-mark" aria-hidden="true">
+            G
+          </span>
           <strong>5,0 no Google</strong>
           <span className="stars" aria-hidden="true">
             ★★★★★
           </span>
-          <span>+50 avaliações</span>
+          <span className="review-count">+50 avaliações</span>
         </div>
       </div>
       <a className="scroll-hint" href="#portfolio">

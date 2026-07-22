@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 
 const displayFont = Cormorant_Garamond({
@@ -8,10 +8,10 @@ const displayFont = Cormorant_Garamond({
   weight: ["500", "600", "700"],
   display: "swap",
 });
-const bodyFont = Poppins({
+const bodyFont = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -21,7 +21,9 @@ export const metadata: Metadata = {
   description:
     "Decoração personalizada para festas infantis e adultas em São Leopoldo e região. Peça seu orçamento pelo WhatsApp.",
   alternates: { canonical: "https://julianastomazi.github.io/decor-sandri-festas/" },
-  icons: { icon: "https://julianastomazi.github.io/decor-sandri-festas/images/logo.jpg" },
+  icons: {
+    icon: "https://julianastomazi.github.io/decor-sandri-festas/images/logo-decor-sandri.webp",
+  },
   openGraph: {
     title: "Decor Sandri by Inventando Festa",
     description: "Decorações autorais para celebrar do seu jeito.",
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: "https://julianastomazi.github.io/decor-sandri-festas/images/hero.png",
+        url: "https://julianastomazi.github.io/decor-sandri-festas/images/hero-decor-sandri.webp",
         width: 1200,
         height: 630,
         alt: "Decoração Decor Sandri",

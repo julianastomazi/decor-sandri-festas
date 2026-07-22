@@ -19,7 +19,7 @@ export function Footer() {
             <WhatsAppIcon /> WhatsApp
           </a>
         </div>
-        <small>© {new Date().getFullYear()} Decor Sandri. Feito para celebrar.</small>
+        <small>© 2026 Decor Sandri by Inventando Festa. Feito para celebrar.</small>
       </div>
     </footer>
   );
