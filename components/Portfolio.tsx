@@ -1,39 +1,46 @@
 import Image from "next/image";
 import { portfolioItems } from "@/lib/site-data";
-import { SectionHeading } from "./SectionHeading";
+import { InspirationProcessLink } from "./InspirationProcessLink";
 
 export function Portfolio() {
   return (
     <section className="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
-      <div className="container">
-        <SectionHeading
-          eyebrow="Portfólio"
-          title={
-            <>
-              A festa dos seus sonhos <em id="portfolio-title">começa no olhar.</em>
-            </>
-          }
-          description="Cada composição nasce de uma história. Criamos cenários únicos, pensados para emocionar você e seus convidados."
-        />
+      <div className="container portfolio-container">
+        <header className="inspiration-header">
+          <div>
+            <p className="eyebrow">Inspirações</p>
+            <h2 id="portfolio-title">Cenários para celebrar momentos inesquecíveis.</h2>
+          </div>
+          <p>
+            Cada composição nasce de uma história. Criamos cenários únicos para emocionar você e
+            seus convidados.
+          </p>
+        </header>
         <div className="portfolio-grid">
           {portfolioItems.map((item) => (
-            <figure
-              className={`portfolio-card portfolio-card--${item.layout}`}
-              key={`${item.src}-${item.label}`}
-            >
-              <Image
-                src={item.src}
-                fill
-                sizes="(max-width: 680px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                alt={item.alt}
-                style={{ objectPosition: item.position }}
-              />
+            <figure className="portfolio-card" key={`${item.src}-${item.label}`}>
+              <div className="portfolio-visual">
+                <Image
+                  src={item.src}
+                  width={item.width}
+                  height={item.height}
+                  sizes="(max-width: 767px) 92vw, (max-width: 1199px) 46vw, 58vw"
+                  alt={item.alt}
+                />
+              </div>
               <figcaption>
-                {item.label}
-                <span aria-hidden="true">↗</span>
+                <strong>{item.label}</strong>
+                <span>{item.category}</span>
               </figcaption>
             </figure>
           ))}
+          <aside className="inspiration-cta" aria-label="Conheça nosso processo">
+            <p>
+              Transformamos ideias em cenários exclusivos, desenhados para refletir a personalidade
+              de cada celebração e criar memórias que permanecem muito além da festa.
+            </p>
+            <InspirationProcessLink />
+          </aside>
         </div>
       </div>
     </section>

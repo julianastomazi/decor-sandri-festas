@@ -2,7 +2,7 @@ import { WhatsAppButton } from "./WhatsAppButton";
 
 export function FinalCta() {
   return (
-    <section className="final-cta" id="contato" aria-labelledby="contact-title">
+    <section className="final-cta" id="contato" tabIndex={-1} aria-labelledby="contact-title">
       <div className="container final-cta-content">
         <p className="eyebrow">Sua festa começa aqui</p>
         <h2 id="contact-title">

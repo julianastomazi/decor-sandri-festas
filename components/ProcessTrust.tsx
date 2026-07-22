@@ -1,4 +1,5 @@
 import { processSteps } from "@/lib/site-data";
+import { RotatingReviews } from "./RotatingReviews";
 import { SectionHeading } from "./SectionHeading";
 
 export function ProcessTrust() {
@@ -39,10 +40,7 @@ export function ProcessTrust() {
           <span>avaliações</span>
           <p>de clientes encantados</p>
         </div>
-        <blockquote>
-          “Tudo feito com muito carinho, capricho e atenção. A decoração ficou ainda mais linda do
-          que imaginávamos.”<cite>— relato de cliente</cite>
-        </blockquote>
+        <RotatingReviews />
       </section>
     </>
   );
