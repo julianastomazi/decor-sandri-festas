@@ -1,3 +1,5 @@
+import { assetPath } from "./asset-path";
+
 export const site = {
   name: "Decor Sandri",
   signature: "by Inventando Festa",
@@ -18,7 +20,7 @@ export const navigation = [
 
 export const portfolioItems = [
   {
-    src: "/images/inspire-festa-infantil-fazendinha.png",
+    src: assetPath("/images/inspire-festa-infantil-fazendinha.png"),
     width: 900,
     height: 858,
     alt: "Decoração infantil com tema fazendinha, balões coloridos e personagens de animais",
@@ -27,7 +29,7 @@ export const portfolioItems = [
     layout: "feature",
   },
   {
-    src: "/images/inspire-festa-adulta-rosa.png",
+    src: assetPath("/images/inspire-festa-adulta-rosa.png"),
     width: 900,
     height: 720,
     alt: "Decoração de aniversário adulto em tons de rosa, nude e dourado",
@@ -36,7 +38,7 @@ export const portfolioItems = [
     layout: "standard",
   },
   {
-    src: "/images/inspire-cha-bebe-neutro.png",
+    src: assetPath("/images/inspire-cha-bebe-neutro.png"),
     width: 900,
     height: 720,
     alt: "Decoração de chá de bebê em azul claro, verde e tons neutros",
@@ -45,7 +47,7 @@ export const portfolioItems = [
     layout: "standard",
   },
   {
-    src: "/images/inspire-festa-infantil-futebol.png",
+    src: assetPath("/images/inspire-festa-infantil-futebol.png"),
     width: 900,
     height: 900,
     alt: "Decoração infantil com tema futebol em verde, preto e branco",
@@ -54,7 +56,7 @@ export const portfolioItems = [
     layout: "standard",
   },
   {
-    src: "/images/inspire-cha-revelacao.png",
+    src: assetPath("/images/inspire-cha-revelacao.png"),
     width: 900,
     height: 992,
     alt: "Decoração de chá revelação em rosa e azul com ursinhos",
@@ -63,7 +65,7 @@ export const portfolioItems = [
     layout: "standard",
   },
   {
-    src: "/images/inspire-festa-adulta-vinho.png",
+    src: assetPath("/images/inspire-festa-adulta-vinho.png"),
     width: 900,
     height: 720,
     alt: "Decoração de aniversário adulto em vinho, cobre e dourado",
@@ -72,7 +74,7 @@ export const portfolioItems = [
     layout: "standard",
   },
   {
-    src: "/images/inspire-cha-bebe-azul.png",
+    src: assetPath("/images/inspire-cha-bebe-azul.png"),
     width: 900,
     height: 675,
     alt: "Decoração de chá de bebê em azul marinho, verde e dourado",
@@ -81,7 +83,7 @@ export const portfolioItems = [
     layout: "wide",
   },
   {
-    src: "/images/inspire-cha-bebe-rosa.png",
+    src: assetPath("/images/inspire-cha-bebe-rosa.png"),
     width: 900,
     height: 675,
     alt: "Decoração de chá de bebê em rosa, bege e dourado",
